@@ -1,13 +1,22 @@
-# Datos (no se publican; ver enlaces de descarga en el README)
-data/
+# Datos: se sube solo la ESTRUCTURA de carpetas (.gitkeep) + instrucciones,
+# NO las imágenes del dataset (descárgalas con los enlaces del README).
+data/**/*.jpg
+data/**/*.JPG
+data/**/*.jpeg
+data/**/*.tif
+data/**/*.tiff
+data/**/*.png
+data/**/*.ppm
+data/**/*.gif
+data/**/*.bmp
+
+# Copia oficial de la FAU y comprimidos (no publicar)
 HRF_FAU/
 *.zip
 
-# Python
+# Python / sistema
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
-
-# Sistema
 Thumbs.db
 .DS_Store

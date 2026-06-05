@@ -52,6 +52,8 @@ a{color:var(--t)}
 .links a{display:inline-block;margin:6px 10px 6px 0;background:#eef5f4;padding:8px 14px;border-radius:8px;text-decoration:none}
 footer{text-align:center;color:var(--mut);padding:24px;font-size:.85rem}
 code{background:#eef5f4;padding:1px 6px;border-radius:4px}
+pre{background:#0f172a;color:#e6edf3;padding:12px 14px;border-radius:8px;overflow:auto;font-size:.84rem;line-height:1.45}
+ol li{margin:8px 0}
 """
 
 HTML = f"""<!DOCTYPE html>
@@ -166,7 +168,28 @@ HTML = f"""<!DOCTYPE html>
 </section>
 
 <section>
-  <h2>7. Componentes del proyecto</h2>
+  <h2>7. Cómo ejecutar (reproducir el trabajo)</h2>
+  <ol>
+    <li><b>Descargar/clonar</b> el repositorio.</li>
+    <li><b>Descargar el dataset HRF</b> (no viene incluido) y colocarlo en <code>data/HRF/</code>
+      con esta estructura:
+      <pre>data/HRF/
+├─ images/    (45 fotos: 01_h.jpg, 01_dr.JPG, ...)
+├─ manual1/   (ground truth: 01_h.tif, ...)
+└─ mask/      (mascaras FOV: 01_h_mask.tif, ...)</pre>
+      Las carpetas ya vienen creadas (vacias) en el repo; solo pega los archivos descargados.</li>
+    <li><b>Instalar dependencias:</b> <code>pip install -r requirements.txt</code></li>
+    <li><b>Ejecutar:</b>
+      <pre>python run_baseline.py     # corre las 45 -&gt; predicted_masks/ + metricas
+python experiments.py      # estudio de ablacion
+python make_figures.py     # genera las figuras</pre></li>
+    <li>O abre el notebook <code>notebooks/01_pipeline_HRF.ipynb</code> y ejecuta celda por celda
+      (Shift+Enter) para ver el proceso paso a paso.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>8. Componentes del proyecto</h2>
   <div class="links">
     <a href="{REPO_URL}" target="_blank">📦 Repositorio</a>
     <a href="{REPO_URL}/blob/main/notebooks/01_pipeline_HRF.ipynb" target="_blank">📓 Notebook</a>
