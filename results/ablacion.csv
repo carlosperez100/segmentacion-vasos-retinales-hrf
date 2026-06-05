@@ -1,0 +1,7 @@
+config,dice,jaccard
+1. Canal verde + Otsu,0.1212,0.066
+2. + Mediana + CLAHE,0.3859,0.2448
+3. + Correccion iluminacion,0.643,0.4799
+4. + Frangi (umbral Otsu),0.1607,0.09
+5. Frangi + umbral percentil,0.5511,0.4097
+6. Frangi + umbral adaptativo,0.3552,0.2321
